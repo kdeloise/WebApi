@@ -9,7 +9,9 @@ namespace WebApi.Models
     public class EFUsersContext : DbContext
     {
         public EFUsersContext(DbContextOptions<EFUsersContext> options) : base(options)
-        { }
+        {
+            Database.EnsureCreated();
+        }
         public DbSet<User> Users { get; set; }
     }
 }

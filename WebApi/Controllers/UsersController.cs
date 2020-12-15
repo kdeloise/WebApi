@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,15 +14,18 @@ namespace WebApi.Controllers
     public class UsersController : ControllerBase
     {
         IUsersRepository UsersRepository;
+        private readonly ILogger _logger;
 
-        public UsersController(IUsersRepository usersRepository)
+        public UsersController(IUsersRepository usersRepository, ILogger<UsersController> logger)
         {
             UsersRepository = usersRepository;
+            _logger = logger;
         }
 
         [HttpGet(Name = "GetAllItems")]
         public IEnumerable<User> Get()
         {
+            _logger.LogInformation("It's Get method");
             return UsersRepository.Get();
         }
 
@@ -34,6 +38,7 @@ namespace WebApi.Controllers
             {
                 return NotFound();
             }
+            _logger.LogInformation(new ObjectResult(user).ToString());
             return new ObjectResult(user);
         }
 
@@ -44,7 +49,9 @@ namespace WebApi.Controllers
             {
                 return BadRequest();
             }
+
             UsersRepository.Create(user);
+            _logger.LogInformation("It's Post method");
             return CreatedAtRoute("GetUser", new { id = user.Id }, user);
         }
 
@@ -63,6 +70,7 @@ namespace WebApi.Controllers
             }
 
             UsersRepository.Update(updatedUserItem);
+            _logger.LogInformation("It's Put<id> method");
             return RedirectToRoute("GetAllItems");
         }
 
@@ -75,6 +83,7 @@ namespace WebApi.Controllers
             {
                 return BadRequest();
             }
+            _logger.LogInformation("It's Delete<id> method");
             return new ObjectResult(deletedUserItem);
         }
     }

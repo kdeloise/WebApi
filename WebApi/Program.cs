@@ -18,6 +18,10 @@ namespace WebApi
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .ConfigureLogging((ctx, logging) =>
+                {
+                    logging.AddConfiguration(ctx.Configuration.GetSection("Logging"));
+                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
