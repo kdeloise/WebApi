@@ -5,11 +5,9 @@ using System.Threading.Tasks;
 
 namespace WebApi.Models
 {
-    public class User
+    public class UpdateModel
     {
-        public int Id { get; set; }
         public string Username { get; set; }
-        public byte[] PasswordHash { get; set; }
-        public byte[] PasswordSalt { get; set; }
+        public string Password { get; set; }
     }
 }

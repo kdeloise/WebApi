@@ -10,7 +10,8 @@ namespace WebApi.Models
     {
         public EFUsersContext(DbContextOptions<EFUsersContext> options) : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureDeleted();   // удаляем бд со старой схемой
+            //Database.EnsureCreated();   // создаем бд с новой схемой
         }
         public DbSet<User> Users { get; set; }
     }

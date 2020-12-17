@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jimmy\\Desktop\\C#\\WebApiApp\\WebApi\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\Jimmy\\Desktop\\WebApiGit\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jimmy\\Desktop\\C#\\WebApiApp\\WebApi\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\Jimmy\\Desktop\\WebApiGit\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jimmy\\Desktop\\C#\\WebApiApp\\WebApi\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Jimmy\\Desktop\\WebApiGit\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\Jimmy\\Desktop\\C#\\WebApiApp\\WebApi\\WebApi\\WebApi.csproj",
+        "projectPath": "C:\\Users\\Jimmy\\Desktop\\WebApiGit\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\Jimmy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jimmy\\Desktop\\C#\\WebApiApp\\WebApi\\WebApi\\obj\\",
+        "outputPath": "C:\\Users\\Jimmy\\Desktop\\WebApiGit\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jimmy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.0, )",
