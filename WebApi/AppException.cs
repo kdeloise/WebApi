@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApi
+namespace WebApi.EF
 {
     public class AppException : Exception
     {

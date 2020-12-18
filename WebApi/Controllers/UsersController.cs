@@ -12,6 +12,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using WebApi.EF;
 using WebApi.Models;
 
 namespace WebApi.Controllers
@@ -91,23 +92,27 @@ namespace WebApi.Controllers
         }
 
         [HttpGet(Name = "GetAllItems")]
-        public IEnumerable<User> Get()
+        public IActionResult Get()
         {
+            var users = _usersRepository.Get();
+            var model = _mapper.Map<IList<UserModel>>(users);            
             _logger.LogInformation("It's Get method");
-            return _usersRepository.Get();
+            return Ok(model);
+            //return _usersRepository.Get();
         }
 
         [HttpGet("{Id}", Name = "GetUser")]
         public IActionResult Get(int Id)
         {
             User user = _usersRepository.Get(Id);
+            UserModel model = _mapper.Map<UserModel>(user);
 
             if (User == null)
             {
                 return NotFound();
             }
             _logger.LogInformation($"It's Get by id={Id} method");
-            return new ObjectResult(user);
+            return Ok(model);
         }
 
         [HttpPost]
@@ -139,7 +144,7 @@ namespace WebApi.Controllers
 
             _usersRepository.Update(updatedUserItem);
             _logger.LogInformation($"It's Put id = {Id} method");
-            return RedirectToRoute("GetAllItems");
+            return Ok();
         }
 
         [HttpDelete("{id}")]
@@ -152,7 +157,7 @@ namespace WebApi.Controllers
                 return BadRequest();
             }
             _logger.LogInformation($"It's Delete id = {Id} method");
-            return new ObjectResult(deletedUserItem);
+            return Ok();
         }
     }
 }

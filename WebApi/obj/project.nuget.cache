@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "VW2L8jgEqH7qZ9UXnzP+uAMXLQXrVgVYrRZ+VonAS6cU7iItPiQzMA8Cc17EL/82AUoFANfgtOe30ylyCHqP3A==",
+  "dgSpecHash": "Ffsg9TcjW5KS6SqZ+FFmqGdH4kNpsCpdVBceFoT7ReFF2j72fQESH0ppXHPxgpCJFc1myYbCdsPpWee7MeCI9g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jimmy\\Desktop\\WebApiGit\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jimmy\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Jimmy\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\Jimmy\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Jimmy\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
     "C:\\Users\\Jimmy\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.0\\microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",

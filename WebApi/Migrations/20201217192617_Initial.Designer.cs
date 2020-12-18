@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebApi.Models;
+using WebApi.EF;
 
 namespace WebApi.Migrations
 {
     [DbContext(typeof(EFUsersContext))]
-    [Migration("20201217025532_Initial")]
+    [Migration("20201217192617_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace WebApi.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
-            modelBuilder.Entity("WebApi.Models.User", b =>
+            modelBuilder.Entity("WebApi.EF.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

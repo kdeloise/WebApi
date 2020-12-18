@@ -121,3 +121,4 @@ C:\Users\Jimmy\Desktop\WebApiGit\WebApi\obj\Debug\net5.0\ref\WebApi.dll
 C:\Users\Jimmy\Desktop\WebApiGit\WebApi\obj\Debug\net5.0\WebApi.pdb
 C:\Users\Jimmy\Desktop\WebApiGit\WebApi\obj\Debug\net5.0\WebApi.genruntimeconfig.cache
 C:\Users\Jimmy\Desktop\WebApiGit\WebApi\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Jimmy\Desktop\WebApiGit\WebApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
